@@ -1,0 +1,280 @@
+/* ====== Reset and Base Styles ====== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f7b6c8;
+  font-family: "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  color: #fff;
+}
+
+/* Navbar styles */
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.podcast-name {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #ff69b4;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff69b4;
+}
+/* ====== Animated Blobs ====== */
+.blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    #ffcc00 0%,
+    #ff0099 50%,
+    #6e00ff 100%
+  );
+  opacity: 0.8;
+  animation: blobWiggle 60s ease-in-out infinite, blobRotate 60s linear infinite;
+  mix-blend-mode: normal;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  transition: background 1s ease-in-out, border-radius 1s ease-in-out;
+  z-index: 0;
+}
+
+/* Blobs Positioning */
+.blob:nth-of-type(1) {
+  top: 5%;
+  left: 5%;
+  animation-delay: 0s;
+}
+.blob:nth-of-type(2) {
+  top: 25%;
+  left: 75%;
+  background: radial-gradient(
+    circle at 70% 40%,
+    #ff9900 0%,
+    #ff00cc 50%,
+    #6600ff 100%
+  );
+  animation-delay: 5s;
+}
+.blob:nth-of-type(3) {
+  top: 80%;
+  left: 10%;
+  background: radial-gradient(
+    circle at 20% 60%,
+    #ff8800 0%,
+    #ff33cc 50%,
+    #5500ff 100%
+  );
+  animation-delay: 10s;
+}
+.blob:nth-of-type(4) {
+  top: 10%;
+  left: 90%;
+  background: radial-gradient(
+    circle at 50% 70%,
+    #ffaa00 0%,
+    #ff66cc 50%,
+    #4400ff 100%
+  );
+  animation-delay: 15s;
+}
+.blob:nth-of-type(5) {
+  top: 60%;
+  left: 5%;
+  background: radial-gradient(
+    circle at 40% 40%,
+    #ffcc00 0%,
+    #ff33aa 50%,
+    #3300ff 100%
+  );
+  animation-delay: 20s;
+}
+.blob:nth-of-type(6) {
+  top: 85%;
+  left: 80%;
+  background: radial-gradient(
+    circle at 60% 50%,
+    #ffbb00 0%,
+    #ff00aa 50%,
+    #2200ff 100%
+  );
+  animation-delay: 25s;
+}
+.blob:nth-of-type(7) {
+  top: 35%;
+  left: 45%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #ffee00 0%,
+    #ff3399 50%,
+    #1100ff 100%
+  );
+  animation-delay: 30s;
+}
+.blob:nth-of-type(8) {
+  top: 3%;
+  left: 8%;
+  background: radial-gradient(
+    circle at 60% 60%,
+    #ff99cc 0%,
+    #cc00ff 50%,
+    #4400ff 100%
+  );
+  animation-delay: 35s;
+}
+.blob:nth-of-type(9) {
+  top: 12%;
+  left: 22%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #ff77aa 0%,
+    #dd00ee 50%,
+    #3300cc 100%
+  );
+  animation-delay: 40s;
+}
+.blob:nth-of-type(10) {
+  top: 18%;
+  left: 2%;
+  background: radial-gradient(
+    circle at 40% 60%,
+    #ffaaee 0%,
+    #cc00cc 50%,
+    #2200aa 100%
+  );
+  animation-delay: 45s;
+}
+
+@keyframes blobWiggle {
+  0% {
+    transform: translate(0, 0) scale(1);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  15% {
+    transform: translate(8vw, -5vh) scale(1.1);
+    border-radius: 65% 35% 45% 55% / 55% 45% 55% 45%;
+  }
+  30% {
+    transform: translate(-12vw, 10vh) scale(0.95);
+    border-radius: 70% 30% 50% 50% / 50% 50% 30% 70%;
+  }
+}
+
+/* ====== Container Styling ====== */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: none;
+  background-color: transparent; /* Removed dark overlay */
+}
+
+/* ====== Title ====== */
+.title {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+/* ====== Typing Effect Without Cursor ====== */
+.typing-container {
+  font-size: 24px;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  width: fit-content;
+  margin: 0 auto 30px;
+  animation: typing 3s steps(23, end) forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 23ch;
+  }
+}
+
+/* ====== Iframes (No internal scroll) ====== */
+iframe {
+  max-width: 100%;
+  border: none;
+  overflow: hidden;
+  scrollbar-width: none;
+}
+
+iframe::-webkit-scrollbar {
+  display: none;
+}
+
+/* ====== Back to Home Button ====== */
+.home-button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 6px 12px;
+  background-color: #ffd700;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #ffc300;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 600px) {
+  .title {
+    font-size: 32px;
+  }
+  .typing-container {
+    font-size: 18px;
+  }
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+}

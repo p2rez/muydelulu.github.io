@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar-container">
+      <a href="index.html" class="podcast-name">Muy Delulu</a>
+      <ul class="nav-links">
+        <li><a href="chisme.html">Chisme</a></li>
+        <li><a href="episodes.html">Episodes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Blobs background -->
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+
+    <!-- Main content container -->
+    <div class="container">
+      <div class="content">
+        <h1>Contact Us</h1>
+        <div class="card">
+          <form action="https://formspree.io/f/mwpornkl" method="POST">
+            <input
+              type="hidden"
+              name="_redirect"
+              value="https://yourwebsite.com/thank-you.html"
+            />
+
+            <div class="input__container">
+              <label class="input__label" for="first-name">First Name:</label>
+              <input
+                class="input"
+                type="text"
+                name="first-name"
+                id="first-name"
+                required
+              />
+            </div>
+
+            <div class="input__container">
+              <label class="input__label" for="last-name">Last Name:</label>
+              <input
+                class="input"
+                type="text"
+                name="last-name"
+                id="last-name"
+                required
+              />
+            </div>
+
+            <div class="input__container">
+              <label class="input__label" for="email">Your Email:</label>
+              <input
+                class="input"
+                type="email"
+                name="email"
+                id="email"
+                required
+              />
+            </div>
+
+            <div class="input__container">
+              <label class="input__label" for="message">Your Message:</label>
+              <textarea
+                class="input"
+                name="message"
+                id="message"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
